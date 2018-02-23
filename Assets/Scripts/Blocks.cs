@@ -7,7 +7,7 @@ public class Blocks : MonoBehaviour
 
 
 	//Height multiplies the final noise output
-	public float Height = 200.0f;
+	public float Height = 10.0f;
 
 	//This divides the noise frequency
 	public float NoiseSize = 10.0f;
@@ -82,6 +82,8 @@ public class Blocks : MonoBehaviour
 				GameObject box = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
 				float noise = PerlinNoise (i, p);
+
+				Debug.Log (noise);
 
 				box.GetComponent<Renderer>().material.color = GenerateRandomColor();
 				box.transform.position = new Vector3( i, noise , p);
