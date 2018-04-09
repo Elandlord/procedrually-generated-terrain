@@ -104,7 +104,7 @@ public class Blocks : MonoBehaviour
 				for(int depth = 0; depth <= bottomY; depth++)
 				{
 					if (depth == 0) {
-						if (Mathf.Round(noiseY) == 2) {
+						if (Mathf.Round(noiseY) == 3) {
 							GenerateCube (x, noiseY, z, water);
 						} else {
 							GenerateCube (x, noiseY , z, grass);
